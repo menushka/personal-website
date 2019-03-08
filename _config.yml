@@ -17,23 +17,26 @@ defaults:
       layout: "post"
 
 projects:
+  show_language: true
+  show_stargazers_count: false
+  show_forks_count: false
   sort_by: pushed
   # sort_by options:
   #   - pushed
   #   - stars
-  limit: 9
+  limit: 6
   exclude:
     forks: true
     projects:
     # - repo-name
 
-# social_media:
+social_media:
+  linkedin: menushkaweeratunga
+  twitter: aggromoose
   # behance: your_username
   # facebook: your_username
   # dribbble: your_username
-  # linkedin: your_username
   # stackoverflow: your_user_id
-  # twitter: your_username
   # youtube: your_username
 
 topics:
