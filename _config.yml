@@ -33,14 +33,16 @@ projects:
 nav_links:
   - name: ABOUT
     link: /about
+    fade: true
   - name: RESUME
     link: /resume.pdf
+    fade: false
   - name: BLOG
     link: /blog
+    fade: true
 
 social_media:
   github: menushka
-  facebook: menushka.weeratunga
   twitter: aggromoose
   linkedin: menushkaweeratunga
   # behance: your_username

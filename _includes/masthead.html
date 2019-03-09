@@ -42,7 +42,7 @@
     </div> -->
     <nav class="subnav" aria-label="Respository">
       {% for page in site.nav_links %}
-      <a href="{{ page.link }}" class="custom-nav subnav-item">{{ page.name }}</a>
+      <a href="{{ page.link }}" class="{% if page.fade == false %} no-barba {% endif %} custom-nav subnav-item">{{ page.name }}</a>
       {% endfor %}
     </nav>
     {% if site.social_media %}
