@@ -17,32 +17,53 @@ defaults:
       layout: "post"
 
 projects:
+  show_language: true
+  show_stargazers_count: false
+  show_forks_count: false
   sort_by: pushed
   # sort_by options:
   #   - pushed
   #   - stars
-  limit: 9
+  limit: 6
   exclude:
     forks: true
     projects:
     # - repo-name
 
-# social_media:
+nav_links:
+  - name: ABOUT
+    link: /about
+    fade: true
+  - name: RESUME
+    link: /resume.pdf
+    fade: false
+  - name: BLOG
+    link: /blog
+    fade: true
+
+social_media:
+  github: menushka
+  twitter: aggromoose
+  linkedin: menushkaweeratunga
   # behance: your_username
-  # facebook: your_username
   # dribbble: your_username
-  # linkedin: your_username
   # stackoverflow: your_user_id
-  # twitter: your_username
   # youtube: your_username
 
 topics:
-  - name: CSS
-    web_url: https://github.com/topics/css
-    image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/css/css.png
-
-  - name: Web design
-
-  - name: Sass
-    web_url: https://github.com/topics/sass
-    image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/sass/sass.png
+  - name: TypeScript
+    description: TypeScript is a superset of JavaScript that compiles to clean JavaScript output.
+    web_url: https://github.com/topics/typescript
+    image_url: /assets/img/typescript.png
+  - name: Node.js
+    description: Node.js is a tool for executing JavaScript in a variety of environments.
+    web_url: https://github.com/topics/nodejs
+    image_url: /assets/img/nodejs.png
+  - name: Machine Learning
+    description: Machine learning is the practice of teaching a computer to learn.
+    web_url: https://github.com/topics/machine-learning
+    image_url: /assets/img/machine-learning.png
+  - name: Virtual Reality
+    description: Virtual reality is a fully immersive and interactive computer-simulated environment.
+    web_url: https://github.com/topics/virtual-reality
+    image_url: /assets/img/virtual-reality.png
