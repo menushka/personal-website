@@ -54,16 +54,16 @@ topics:
   - name: TypeScript
     description: TypeScript is a superset of JavaScript that compiles to clean JavaScript output.
     web_url: https://github.com/topics/typescript
-    image_url: http://localhost:4000/assets/img/typescript.png
+    image_url: /assets/img/typescript.png
   - name: Node.js
     description: Node.js is a tool for executing JavaScript in a variety of environments.
     web_url: https://github.com/topics/nodejs
-    image_url: http://localhost:4000/assets/img/nodejs.png
+    image_url: /assets/img/nodejs.png
   - name: Machine Learning
     description: Machine learning is the practice of teaching a computer to learn.
     web_url: https://github.com/topics/machine-learning
-    image_url: http://localhost:4000/assets/img/machine-learning.png
+    image_url: /assets/img/machine-learning.png
   - name: Virtual Reality
     description: Virtual reality is a fully immersive and interactive computer-simulated environment.
     web_url: https://github.com/topics/virtual-reality
-    image_url: http://localhost:4000/assets/img/virtual-reality.png
+    image_url: /assets/img/virtual-reality.png
