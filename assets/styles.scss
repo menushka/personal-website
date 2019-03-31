@@ -26,8 +26,7 @@
 }
 
 .article {
-  h1, h2, h3, h4,
-  .highlight {
+  h1, h2, h3, h4 {
     margin-bottom: 16px;
   }
 
@@ -52,3 +51,22 @@
 .hoverButtons { text-decoration: none !important; }
 
 .custom-nav { font-size: 13px !important; padding: 5px 14px; }
+
+figure > img {
+  width: 100%;
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.1);  
+}
+
+figure > figcaption {
+  text-align: center;
+  font-size: 14px;
+  font-style: italic;
+}
+
+pre {
+  background: white;
+  overflow-x: scroll;
+  padding: 20px !important;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 5px;
+}
