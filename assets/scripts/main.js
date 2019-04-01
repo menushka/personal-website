@@ -22,6 +22,9 @@ $('document').ready(function() {
         opacity: 0
       });
 
+      // Function from darkMode.js
+      switchMode(darkMode, false);
+
       $el.animate({ opacity: 1 }, 400, function() {
         _this.done();
       });
