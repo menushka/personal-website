@@ -16,7 +16,10 @@ function switchMode(darkMode, animated) {
       ['border-gray-light', 'border-dark'],
 
       // Nav Bar colors
-      ['nav-gray', 'nav-white-fromGray']
+      ['nav-gray', 'nav-white-fromGray'],
+
+      // Icon colors
+      ['icon-black', 'icon-white-fromBlack']
     ],
     '.highlight': [
       // Code syntax colors
@@ -90,7 +93,7 @@ function switchMode(darkMode, animated) {
       ['vc', 'dark-vc'], 
       ['vg', 'dark-vg'], 
       ['vi', 'dark-vi'], 
-      ['il', 'dark-il'], 
+      ['il', 'dark-il']
     ]
   };
 

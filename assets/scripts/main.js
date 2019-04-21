@@ -1,4 +1,11 @@
 $('document').ready(function() {
+  Barba.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container, newPageRawHTML) {
+    var js = container.querySelector("script");
+    if(js != null){
+        eval(js.innerHTML);
+    }
+  })
+
   var transition = Barba.BaseTransition.extend({
     start: function() {
       Promise.all([
