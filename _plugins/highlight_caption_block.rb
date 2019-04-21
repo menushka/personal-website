@@ -70,7 +70,7 @@ module Menushka
       ].join(" ")
 
       res = "<figure class=\"highlight\" style=\"width:auto;overflow:visible;background:none;\">"
-      res += "<pre><code #{code_attributes}>#{code.chomp}</code></pre>"
+      res += "<pre class='pre'><code #{code_attributes}>#{code.chomp}</code></pre>"
       res += "<figcaption>#{@caption}</figcaption>" if @caption
       res += "</figure>"
       res
