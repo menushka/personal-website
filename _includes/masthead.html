@@ -4,45 +4,17 @@
   {% assign metadata_styles = 'flex-items-center mb-3' %}
 {% endif %}
 
-<img src="{{ user.avatar_url }}" alt="Profile picture" class="circle mb-3" style="max-width: 150px;">
-<h1 class="{% if site.style == 'dark' %}text-white{% endif %} h2 mb-2 lh-condensed">{% if user.name %}{{ user.name }}{% else %}{{ user.login }}{% endif %}</h1>
-<p class="mb-3 f4 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">
+<a href="{{ site.url }}{{ site.baseurl | append:'/' }}"><img src="{{ user.avatar_url }}" alt="Profile picture" class="circle mb-3" style="max-width: 150px;"></a>
+<h1 class="text-gray-dark h2 mb-2 lh-condensed">{% if user.name %}{{ user.name }}{% else %}{{ user.login }}{% endif %}</h1>
+<p class="mb-3 f4 text-gray">
   {{ user.bio }}
 </p>
 
 {% if include.metadata %}
   <div class="f4 mb-6">
-    <!-- {% if user.name %}
-      <div class="{{ metadata_styles }}">
-        <a href="https://github.com/{{ user.login }}" {% if site.style == 'dark' %}class="text-white"{% endif %}>
-          GITHUB
-        </a>
-      </div>
-    {% endif %} -->
-    <!-- {% if user.email %}
-      <div class="{{ metadata_styles }}">
-        {% octicon mail height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:email %}
-        <a href="mailto:{{ user.email }}" {% if site.style == 'dark' %}class="text-white"{% endif %}>
-          {{ user.email }}
-        </a>
-      </div>
-    {% endif %} -->
-    <!-- {% if user.location %}
-      <div class="{{ metadata_styles }} {% if site.style == 'dark' %}text-white{% endif %}">
-        {% octicon location height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:Location %}
-        {{ user.location }}
-      </div>
-    {% endif %} -->
-    <!-- <div class="my-5">
-      <a class="link-gray">ABOUT</a>
-      {% octicon kebab-horizontal height:20 class:"mx-1 v-align-middle" fill:{{ icon_color }} %}
-      <a class="link-gray">RESUME</a>
-      {% octicon kebab-horizontal height:20 class:"mx-1 v-align-middle" fill:{{ icon_color }} %}
-      <a class="link-gray">BLOG</a>
-    </div> -->
     <nav class="subnav" aria-label="Respository">
       {% for page in site.nav_links %}
-      <a href="{{ page.link }}" class="{% if page.fade == false %} no-barba {% endif %} custom-nav subnav-item">{{ page.name }}</a>
+      <a href="{{ page.link }}" class="{% if page.fade == false %} no-barba {% endif %} custom-nav subnav-item nav-gray">{{ page.name }}</a>
       {% endfor %}
     </nav>
     {% if site.social_media %}
@@ -59,7 +31,12 @@
       </div>
     {% endif %}
     {% if user.hireable %}
-      <span title="Hire me" class="hoverButtons d-inline-block f5 rounded-2 text-white bg-green py-1 px-2 m-2">Available for hire</span>
+      <span title="Hire me" class="hoverButtons d-inline-block f5 rounded-2 ignore-dark-mode text-white bg-green py-1 px-2 m-2">Available for hire</span>
     {% endif %}
+    <div id="switchHolder" class="mt-2">
+      <p class="f5 text-gray">LIGHT</p>
+      <input type="checkbox" id="lightDarkSwitch" /><label for="lightDarkSwitch">Toggle</label>
+      <p class="f5 text-gray">DARK</p>
+    </div>
   </div>
 {% endif %}
