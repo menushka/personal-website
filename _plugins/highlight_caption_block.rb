@@ -35,7 +35,7 @@ module Menushka
         "data-lang=\"#{@lang}\""
       ].join(" ")
 
-      res = "<figure class=\"highlight\" style=\"width:auto;overflow:visible;background:none;\">"
+      res = "<figure class=\"highlight mx-0 mx-lg-6 my-4\" style=\"width:auto;overflow:visible;background:none;\">"
       res += "<pre class='pre'><code #{code_attributes}>#{code.chomp}</code></pre>"
       res += "<figcaption>#{@caption}</figcaption>" if @caption
       res += "</figure>"

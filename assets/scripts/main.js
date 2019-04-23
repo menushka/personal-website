@@ -20,6 +20,7 @@ $('document').ready(function() {
     },
     fadeIn: function() {
 
+      $("html, body").animate({ scrollTop: $(this.newContainer).parent().offset().top }, 800);
       $(this.newContainer).parent().scrollTop(0);
 
       var _this = this;
