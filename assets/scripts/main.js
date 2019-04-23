@@ -19,6 +19,9 @@ $('document').ready(function() {
       return $(this.oldContainer).animate({ opacity: 0}).promise();
     },
     fadeIn: function() {
+
+      $(this.newContainer).parent().scrollTop(0);
+
       var _this = this;
       var $el = $(this.newContainer);
 
