@@ -16,7 +16,7 @@
     {% assign total_shareable_services = shareable_social_media | size %}
 
     {% if total_shareable_services > 0 %}
-      <div class="col-sm-4 col-lg-3 d-flex flex-wrap flex-items-center d-sm-block float-sm-right border rounded-2 bg-white p-3 mb-5 ml-md-5">
+      <div class="col-sm-4 col-lg-3 d-flex flex-wrap flex-items-center d-sm-block float-sm-right border border-gray-light rounded-2 bg-white p-3 mb-5 ml-md-5">
         <h3 class="text-gray-dark mr-3 mr-sm-0">Share</h3>
         <ul class="d-flex d-sm-block list-style-none">
           {% for service in shareable_social_media %}
@@ -30,24 +30,32 @@
       </div>
     {% endif %}
   {% endif %}
-  <div class="article">
+  <div class="article text-gray">
     {{ content }}
   </div>
 {% endcapture %}
 
-<div class="d-md-flex height-full {% unless site.style == 'dark' %}border-md-bottom{% endunless %}">
-  <div class="flexVerticalCenter centered flex-self-stretch {% if site.style == 'dark' %}bg-gray-dark{% else %}border-md-right border-gray-light bg-white{% endif %} col-md-5 col-lg-4 col-xl-3 px-4 px-md-6 px-lg-7 py-6">
+<div class="d-md-flex height-full">
+  <div class="flexVerticalCenter centered flex-self-stretch border-md-right border-gray-light bg-white col-md-5 col-lg-4 col-xl-3 px-4 px-md-6 px-lg-7 py-6">
     {% include masthead.html metadata=true %}
   </div>
 
-  <div id="barba-wrapper" class="scrollable col-md-7 col-lg-8 col-xl-9 px-4 py-6 px-lg-7 border-top border-md-top-0 bg-gray-light" {% if site.style == 'dark' %}style="background-color: #2f363d !important"{% endif %}>
+  <div id="barba-wrapper" class="scrollable col-md-7 col-lg-8 col-xl-9 px-4 py-6 px-lg-7 border-top border-md-top-0 bg-gray-light">
     <div class="barba-container mx-auto" style="max-width: 900px;">
-      <div class="f4 {% if site.style == 'dark' %}text-white{% endif %} mb-6">
-        <div class="f4 {% if site.style == 'dark' %}text-white{% endif %}">
-          <p class="f5"><a href="{{ site.url }}{{ site.baseurl | append:'/' }}" class="d-flex flex-items-center {% if site.style == 'dark' %}text-white{% endif %}">{% octicon chevron-left height:16 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:Home %}Home</a></p>
-          <h1 class="f00-light lh-condensed">{{ page.title }}</h1>
-          <p class="{% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %} mb-5">Published {{ page.date | date: "%b %d, %Y"}}</p>
+      <div class="f4 text-white mb-6">
+        <div class="f4 text-white">
+          <p class="f5"><a href="{{ site.url }}{{ site.baseurl | append:'/' }}" class="link-blueGray d-flex flex-items-center">{% octicon chevron-left height:16 class:"mr-2 v-align-middle icon-black" fill:{{ icon_color }} aria-label:Home %}Home</a></p>
+          <h1 class="text-gray-dark f00-light lh-condensed">{{ page.title }}</h1>
+          <p class="text-gray mb-5">Published {{ page.date | date: "%b %d, %Y"}}</p>
           {{ post_body }}
+          <script>
+          $('a').each(function() {
+            $(this).addClass('link-blue')
+          });
+          if (typeof Prism !== 'undefined') {
+            Prism.highlightAll();
+          }
+          </script>
         </div>
       </div>
     </div>

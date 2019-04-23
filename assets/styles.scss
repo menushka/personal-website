@@ -1,8 +1,10 @@
 ---
 ---
 @import url('https://unpkg.com/primer/build/build.css');
-@import 'highlight-syntax';
-
+@import 'prismjs-theme-light';
+@import 'prismjs-theme-dark';
+@import 'checkbox';
+@import 'darkMode';
 
 // If a user adds a custom font, this component will stop it from bleeding into GitHub components:
 .github-component {
@@ -69,4 +71,5 @@ pre {
   padding: 20px !important;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 5px;
+  border-radius: 3px;
 }

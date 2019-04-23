@@ -1,8 +1,4 @@
-{% if site.style == 'dark' %}
-  {% assign icon_color = "#ffffff" %}
-{% else %}
-  {% assign icon_color = "#24292e" %}
-{% endif %}
+{% assign icon_color = "#24292e" %}
 
 {% assign content = page.content %}
 
@@ -27,5 +23,9 @@
     <script src="/assets/scripts/jquery-3.3.1.min.js" type="text/javascript"></script>
     <script src="/assets/scripts/barba.min.js" type="text/javascript"></script>
     <script src="/assets/scripts/main.js" type="text/javascript"></script>
+    <script src="/assets/scripts/darkMode.js" type="text/javascript"></script>
+    <script src="/assets/scripts/prism.js" type="text/javascript"></script>
   </head>
-  <body class="bg-white height-full" {% if site.style == 'dark' %}style="background-color: #2f363d !important"{% endif %}>
+  <body class="bg-white height-full">
+    <script>switchMode(darkMode, false)</script>
+    <span id="loadingHider" style="display: none;">
