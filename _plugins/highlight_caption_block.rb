@@ -23,44 +23,10 @@ module Menushka
 
       is_safe = !!context.registers[:site].safe
 
-      output =
-        case context.registers[:site].highlighter
-        when "pygments"
-          render_pygments(code, is_safe)
-        when "rouge"
-          render_rouge(code)
-        else
-          render_codehighlighter(code)
-        end
+      output = code
 
       rendered_output = add_code_tag(output)
       prefix + rendered_output + suffix
-    end
-
-    private
-
-    def render_pygments(code, is_safe)
-      Jekyll::External.require_with_graceful_fail("pygments")
-
-      highlighted_code = Pygments.highlight(
-        code,
-        :lexer   => @lang
-      )
-
-      highlighted_code.sub('<div class="highlight"><pre>', "").sub("</pre></div>", "")
-    end
-
-    def render_rouge(code)
-      Jekyll::External.require_with_graceful_fail("rouge")
-      formatter = Rouge::Formatters::HTML.new(
-        :wrap         => false
-      )
-      lexer = Rouge::Lexer.find_fancy(@lang, code) || Rouge::Lexers::PlainText
-      formatter.format(lexer.lex(code))
-    end
-
-    def render_codehighlighter(code)
-      h(code).strip
     end
 
     def add_code_tag(code)

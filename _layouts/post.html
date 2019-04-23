@@ -52,6 +52,9 @@
           $('a').each(function() {
             $(this).addClass('link-blue')
           });
+          if (typeof Prism !== 'undefined') {
+            Prism.highlightAll();
+          }
           </script>
         </div>
       </div>

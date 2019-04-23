@@ -1,8 +1,8 @@
 $('document').ready(function() {
   Barba.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container, newPageRawHTML) {
-    var js = container.querySelector("script");
-    if(js != null){
-        eval(js.innerHTML);
+    var js = container.querySelectorAll("script");
+    for (i = 0; i < js.length; i++) {
+      eval(js[i].innerHTML);
     }
   })
 
