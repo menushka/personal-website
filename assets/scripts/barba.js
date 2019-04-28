@@ -1,4 +1,4 @@
-$('document').ready(function() {
+function barbaReady() {
   Barba.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container, newPageRawHTML) {
     var js = container.querySelectorAll("script");
     for (i = 0; i < js.length; i++) {
@@ -33,8 +33,9 @@ $('document').ready(function() {
         opacity: 0
       });
 
-      // Function from darkMode.js
       switchMode(darkMode, false);
+
+      renderKatex();
 
       $el.animate({ opacity: 1 }, 400, function() {
         _this.done();
@@ -47,4 +48,4 @@ $('document').ready(function() {
   };
 
   Barba.Pjax.start();
-});
+}

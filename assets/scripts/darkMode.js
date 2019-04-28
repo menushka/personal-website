@@ -46,20 +46,19 @@ function switchMode(darkMode, animated) {
   }
 }
 
-const darkModeKey = 'DARK_MODE';
-
-let darkMode = localStorage.getItem(darkModeKey) || false;
-darkMode = typeof(darkMode) === 'string' ? (darkMode === 'true' ? true : false) : darkMode;
-
-// On Ready
-$('document').ready(function() {
+function darkModeReady() {
   $('#lightDarkSwitch').prop('checked', darkMode);
   switchMode(darkMode, false);
-  $('#loadingHider').show();
+  
 
   $('#lightDarkSwitch').change(function() {
     darkMode = !darkMode;
     localStorage.setItem(darkModeKey, darkMode);
     switchMode(darkMode, true);
   });
-});
+}
+
+const darkModeKey = 'DARK_MODE';
+
+let darkMode = localStorage.getItem(darkModeKey) || false;
+darkMode = typeof(darkMode) === 'string' ? (darkMode === 'true' ? true : false) : darkMode;

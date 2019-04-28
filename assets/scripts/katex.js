@@ -4,3 +4,7 @@ function renderKatex() {
         katex.render(pElement.html(), pElement[0], { displayMode: true, throwOnError: false });
     });
 }
+
+function katexReady() {
+    renderKatex();
+}
