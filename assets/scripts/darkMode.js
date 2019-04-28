@@ -53,10 +53,11 @@ darkMode = typeof(darkMode) === 'string' ? (darkMode === 'true' ? true : false) 
 
 // On Ready
 $('document').ready(function() {
-  $("#lightDarkSwitch").prop('checked', darkMode);
+  $('#lightDarkSwitch').prop('checked', darkMode);
   switchMode(darkMode, false);
-  $("#loadingHider").show();
-  $("#lightDarkSwitch").change(function() {
+  $('#loadingHider').show();
+
+  $('#lightDarkSwitch').change(function() {
     darkMode = !darkMode;
     localStorage.setItem(darkModeKey, darkMode);
     switchMode(darkMode, true);
